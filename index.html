@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Spifflings — a cozy family RPG that turns chores into quests. Coming soon.">
+  <meta name="theme-color" content="#0F8A82">
+  <title>Spifflings — Coming Soon</title>
+  <style>
+    :root {
+      --cream: #FFF4E0;
+      --deep-teal: #0F8A82;
+      --ink-teal: #073F3B;
+      --aqua: #22C3B4;
+      --coral: #FF5A36;
+      --gold: #F2B632;
+      --moss: #6FA85A;
+      --cool-gray: #B9C2C6;
+      --slate: #3E5560;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      min-height: 100%;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--cream);
+      color: var(--ink-teal);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--deep-teal);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+    }
+    a:hover, a:focus-visible {
+      color: var(--coral);
+    }
+    a:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1.25rem 1.5rem;
+    }
+
+    header {
+      text-align: center;
+      max-width: 36rem;
+      width: 100%;
+    }
+
+    .logo {
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 1rem;
+      background: var(--deep-teal);
+      box-shadow: 0 4px 0 var(--ink-teal);
+    }
+
+    .wordmark {
+      font-size: clamp(1.75rem, 6vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-teal);
+      margin-bottom: 0.75rem;
+    }
+
+    .pitch {
+      font-size: clamp(1.05rem, 3.4vw, 1.25rem);
+      color: var(--slate);
+      max-width: 28rem;
+      margin: 0 auto 1rem;
+      font-weight: 500;
+    }
+
+    .coming {
+      display: inline-block;
+      margin: 0.25rem auto 1.75rem;
+      padding: 0.45rem 1rem;
+      background: var(--coral);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      box-shadow: 0 3px 0 #C94428;
+    }
+
+    main {
+      width: 100%;
+      max-width: 42rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .shot {
+      width: 100%;
+      max-width: 22rem;
+      margin: 0 auto 0.75rem;
+      border-radius: 1.25rem;
+      overflow: hidden;
+      background: var(--deep-teal);
+      border: 3px solid var(--ink-teal);
+      box-shadow: 0 8px 0 rgba(7, 63, 59, 0.18);
+    }
+
+    .shot img {
+      display: block;
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+
+    .caption {
+      font-size: 0.8rem;
+      color: var(--slate);
+      text-align: center;
+      margin-bottom: 1.25rem;
+      max-width: 22rem;
+    }
+
+    .social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      list-style: none;
+    }
+
+    .social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      min-width: 44px;
+      padding: 0.6rem 1.1rem;
+      background: var(--deep-teal);
+      color: var(--cream);
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 999px;
+      border: 2px solid var(--ink-teal);
+      box-shadow: 0 3px 0 var(--ink-teal);
+    }
+    .social a:hover,
+    .social a:focus-visible {
+      background: var(--ink-teal);
+      color: var(--gold);
+    }
+
+    .contact {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      color: var(--slate);
+    }
+    .contact a {
+      font-weight: 700;
+      color: var(--deep-teal);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--slate);
+      padding-top: 0.5rem;
+      border-top: 2px solid rgba(15, 138, 130, 0.2);
+      width: 100%;
+      max-width: 42rem;
+    }
+
+    @media (min-width: 768px) {
+      .page {
+        padding: 3rem 2rem 2rem;
+      }
+      .logo {
+        width: 128px;
+        height: 128px;
+      }
+      .shot {
+        max-width: 26rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <img
+        class="logo"
+        src="logo-256.png"
+        width="128"
+        height="128"
+        alt="Spifflings logo: two cheerful chore companions, a fluffy cloud and a mossy pebble, ready for a quest">
+      <h1 class="wordmark">Spifflings</h1>
+      <p class="pitch">A cozy family RPG that turns chores into quests.</p>
+      <p class="coming">Coming soon</p>
+    </header>
+
+    <main>
+      <figure class="shot">
+        <img
+          src="house.jpg"
+          width="960" height="1204"
+          alt="Concept art of the Spifflings house: a cozy cream cottage with a teal roof, porch, and mailbox under a teal sky">
+      </figure>
+      <p class="caption">Concept art, not actual gameplay.</p>
+
+      <nav aria-label="Spifflings on social media">
+        <ul class="social">
+          <li><a href="https://x.com/Spifflings" rel="noopener noreferrer">X</a></li>
+          <li><a href="https://www.youtube.com/@spifflings1" rel="noopener noreferrer">YouTube</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61595587666513" rel="noopener noreferrer">Facebook</a></li>
+        </ul>
+      </nav>
+
+      <p class="contact">
+        Questions?
+        <a href="mailto:hello@spifflings.com">hello@spifflings.com</a>
+      </p>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Spifflings</p>
+    </footer>
+  </div>
+</body>
+</html>
